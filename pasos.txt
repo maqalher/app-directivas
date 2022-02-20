@@ -1,0 +1,29 @@
+crear modulo de productos
+  ng g m productos --routing
+
+crear modulo shared
+  ng g m shared
+
+
+crear componente agregar en productos
+  ng g c productos/pages/agregar --skip-Tests -is
+
+crear directiva errorMsg
+  ng g d shared/directives/errorMsg --skip-Tests
+
+  exportar directiva para que pueda ser utilizada fuera (shared.module.ts)
+    exports: [
+      ErrorMsgDirective
+    ]
+
+  para utilizar la directiva se importa el modulo en productos.module.ts
+      imports: [
+      CommonModule,
+      ProductosRoutingModule,
+      ReactiveFormsModule,
+      SharedModule
+    ]
+
+
+crear directiva customIf
+  ng g d shared/directives/customIf --skip-Tests
